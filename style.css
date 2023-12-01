@@ -1,41 +1,89 @@
+body {
+  background-color: #D0A2F7;
+}
+
 .gradient-background {
     background: linear-gradient(300deg, purple, #C59BD9, #AC55D7);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
+}
+  
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* .navi {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.nav-list li a{
+  color: antiquewhite;
+}
+
+.logo {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.logo img{
+  max-width: 100%;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.icon-square img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+
+
+.carousel-inner .active{
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-item img{
+  max-height: 75vh;
+  max-width: 100%;
+
+}
+
+
+@media (max-width: 575px) {
+  .logo {
+    padding-left: 24px;
+  padding-right: 24px;
   }
   
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+}
+
+@media (min-width: 992px){
+  #hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-
-  .categories {
-    color: white;
+  #prodcuts{
+    height: 100vh;
+       display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-
-  .titles {
-    padding-top: 8rem;
-  }
-  .carousel-item > .title {
-    border-radius: 5%;
-  }
-
-  .icon-square {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.75rem;
-  }
-
-  .icon-square img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.75rem;
-  }
+}
