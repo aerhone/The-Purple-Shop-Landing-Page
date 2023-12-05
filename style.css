@@ -2,31 +2,12 @@ body {
   background-color: #D0A2F7;
 }
 
-.gradient-background {
-    background: linear-gradient(300deg, purple, #C59BD9, #AC55D7);
-    background-size: 180% 180%;
-    animation: gradient-animation 18s ease infinite;
+.gradient-background{
+  background-color: purple;
 }
-  
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* .navi {
-  display: flex;
-  justify-content: space-between;
-} */
 
 .nav-list li a{
-  color: antiquewhite;
+  color: #F1EAFF;
 }
 
 .logo {
@@ -63,16 +44,81 @@ body {
 
 }
 
+#about{
+  background: #F1EAFF;
+}
+
+.story{
+  display: grid;
+  grid-template-columns: .5fr 1.5fr;
+  grid-template-rows: auto auto;
+}
+
+.story h2{
+  grid-column: span 2;
+}
+
+.storyPhotos{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.storyPhotos img{
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.storyPhotos div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#branches{
+  color: #F1EAFF;
+}
+
+.branches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2em;
+}
+
+.storePhoto{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1em;
+}
+
+.storePhoto img{
+  width: 100%;
+  border-radius: 12px; 
+}
+
+.addressContainer{
+  display: flex;
+  align-items: center;
+}
+
+.address img{
+  width: 1em;
+}
 
 @media (max-width: 575px) {
   .logo {
     padding-left: 24px;
-  padding-right: 24px;
+    padding-right: 24px;
   }
   
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) and (min-height: 500px){
   #hero{
     height: 100vh;
     display: flex;
@@ -85,5 +131,20 @@ body {
        display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+@media (max-width: 767px){
+  .story{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .story h2{
+    order: 1;
+  }
+
+  .branches{
+    display: flex;
+    flex-direction: column;
   }
 }
